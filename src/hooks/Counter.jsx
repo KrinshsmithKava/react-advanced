@@ -6,6 +6,10 @@ function Counter(props) {
 
     useEffect(() => {
         document.title = `${name} clicked ${count} times!`;
+
+        return () => {
+            console.log('clean up');
+        }
     })
     // componentDidMount
     // componentDidUpdate
