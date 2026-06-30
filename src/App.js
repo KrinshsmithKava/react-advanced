@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import MoviePage from './context/MoviePage';
 
 class App extends Component {
+  state = { currentUser: { name: "Mosh" } }
   render() {
     return (
       <div>
