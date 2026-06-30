@@ -6,6 +6,7 @@ function MovieRow(props) {
     const userContext = useContext(UserContext);
     const cartContext = useContext(CartContext);
 
+    console.log("Cart Context", cartContext);
 
     return (
         <div>
