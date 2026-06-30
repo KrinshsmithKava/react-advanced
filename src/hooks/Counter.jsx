@@ -1,18 +1,15 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 
 function Counter(props) {
     const [count, setCount] = useState(0);
-    if (count == 0) {
-        const [name, setName] = useState('');
-    }
-
+    const [name, setName] = useState('');
 
     useEffect(() => {
-        console.log('useEffect');
-    }, [count]);
-
+        document.title = `${name} clicked ${count} times!`;
+    }
     // componentDidMount
     // componentDidUpdate
+    // componentWillUnmount
 
     return (
         <Fragment>
