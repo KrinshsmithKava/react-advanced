@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import MoviePage from './context/MoviePage';
 import UserContext from './context/userContext';
+import Login from './context/Login';
 
 class App extends Component {
   handleLoggedIn = (username) => {
     console.log("Getting the user: " + username);
-    const user = { name: "Mosh" };
+    const user = { name: "ABC" };
     this.setState({ currentUser: user });
   }
 
-  state = { currentUser: { name: "Mosh" } };
+  state = { currentUser: null };
 
   render() {
     return (
@@ -21,6 +22,7 @@ class App extends Component {
       >
         <div>
           <MoviePage />
+          <Login />
       </div>
       </UserContext.Provider>
     );
