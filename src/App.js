@@ -13,7 +13,12 @@ class App extends Component {
 
   render() {
     return (
-      <UserContext.Provider value={this.state.currentUser}>
+      <UserContext.Provider
+        value={{
+            currentUser: this.state.currentUser,
+            onLoggedIn: this.handleLoggedIn
+        }}
+      >
         <div>
           <MoviePage />
       </div>
