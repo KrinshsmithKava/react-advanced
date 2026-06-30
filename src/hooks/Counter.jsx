@@ -5,7 +5,7 @@ function Counter(props) {
     const [name, setName] = useState('');
 
     useEffect(() => {
-        document.title = `${name} clicked ${count} times!`;
+        document.title = `${name} has clicked ${count} times!`;
 
         return () => {
             console.log('clean up');
