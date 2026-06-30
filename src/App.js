@@ -15,7 +15,7 @@ class App extends Component {
 
   render() {
     return (
-      <CartContext.Provider>
+      <CartContext.Provider value={{ cart: [] }}>
         <UserContext.Provider
           value={{
               currentUser: this.state.currentUser,
