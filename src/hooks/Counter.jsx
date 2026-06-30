@@ -6,7 +6,7 @@ function Counter(props) {
 
     useEffect(() => {
         document.title = `${name} clicked ${count} times!`;
-    }
+    })
     // componentDidMount
     // componentDidUpdate
     // componentWillUnmount
