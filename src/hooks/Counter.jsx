@@ -9,8 +9,8 @@ function Counter(props) {
 
         return () => {
             console.log('clean up');
-        }
-    })
+        };
+    }, []);
     // componentDidMount
     // componentDidUpdate
     // componentWillUnmount
