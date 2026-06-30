@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
+import UserContext from './userContext';
 
 class MovieList extends Component {
+    static contextType = UserContext;
+
+    componentDidMount() {
+        console.log("Context", this.context);
+    }
+
     render() {
         return (
-            <div>
-                Movie List
-            </div>
+            <UserContext.Consumer>
+                { userContext => <div>Movie List {userContext.name} </div> }
+            </UserContext.Consumer>
         );
     }
 }

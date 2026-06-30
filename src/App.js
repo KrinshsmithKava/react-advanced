@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import MoviePage from './context/MoviePage';
+import UserContext from './context/userContext';
 
 class App extends Component {
-  state = { currentUser: { name: "Mosh" } }
+  state = { currentUser: { name: "Mosh  " } }
   render() {
     return (
-      <div>
-        <MoviePage />
+      <UserContext.Provider value={this.state.currentUser}>
+        <div>
+          <MoviePage />
       </div>
+      </UserContext.Provider>
     );
   }
 }
